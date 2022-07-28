@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+.calcBody {
+    background-color: grey;
+    position: relative;
+    width: 400px;
+    height: 600px;
+    max-width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.screen {
+    background-color: lightgreen;
+    position: absolute;
+    width: 336px;
+    height: 100px;
+    top: 40px;
+    max-width: 100%;
+    left: 33px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.numbers {
+    position: absolute;
+    display: grid;
+    gap: 20px;
+    top: 240px;
+    left: 33px;
+
+
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+
+ 
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.individualNumber {
+    background-color: lightgrey;
+    width: 70px;
+    height: 70px;
+
+    margin: auto;
+    display: flex;
+
+    font-size: 30px;
+
+    align-items: center;
+    justify-content: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+.zero {
+    background: lightgray;
+    position: absolute;
+    margin: 0;
+    display: flex;
+
+    left: 33px;
+    top: 500px;
+
+    height: 70px;
+    width: 240px;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.equal {
+    background-color: orange;
+    position: absolute;
+
+    margin: auto;
+    display: flex;
+
+    width: 70px;
+    height: 160px;
+    left: 300px;
+    top: 410px;
+    font-size: 30px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.operatorsOne {
+
+    position: absolute;
+    display: grid;
+
+    left: 300px;
+    top: 240px;
+
+    grid-template-columns: repeat(1, 1fr);
+    
+    column-gap: 15px;
+    row-gap: 15px;
+
+
+  
+}
+
+.subOperators {
+    background-color: lightgrey;
+    width: 70px;
+    height: 70px;
+
+    font-size: 30px;
+
+    margin: auto;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+ 
+}
+
+.operatorsTwo {
+
+    position: absolute;
+    display: grid;
+
+    left: 215px;
+    top: 170px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+
+    gap: 15px;
+
+}
+
+.subOperatorsTwo {
+    background-color: lightgrey;
+    width: 70px;
+    height: 50px;
+
+    font-size: 30px;
+
+    margin: auto;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+ 
+}
+  
+.off {
+    position: absolute;
+    display: flex;
+
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    background-color: lightgray;
+    height: 50px;
+    width: 60px;
+
+    top: 170px;
+    left: 33px;
 }
