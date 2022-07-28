@@ -1,8 +1,7 @@
-import "./app.css"
 
-function Off() {
+function Off(props) {
     return(
-        <div className="off">
+        <div className={props.className}>
             OFF
         </div>
     )
