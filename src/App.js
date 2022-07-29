@@ -11,7 +11,7 @@ function App() {
     return(
         <div>
             <CalcBody className="calcBody"/>
-            <Screen className="screen"/>
+            <Screen className="screen" heading="Emma's Calculator" count={1}/>
             <Off className="off"/>
 
             <div className="operatorsOne">

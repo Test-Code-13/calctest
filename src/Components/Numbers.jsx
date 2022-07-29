@@ -30,9 +30,17 @@ import "../app.css"
 function Numbers(props) {
     return(
         <div>
-            <p className={props.className}>{props.number}</p>
+            <p className={props.className}>{props.text}{props.number}</p>
         </div>
     )
+}
+
+Numbers.defaultProps = {
+    text: '+'
+}
+
+Numbers.propTypes = {
+    number: String // Boolean, Number
 }
 
 export default Numbers;
