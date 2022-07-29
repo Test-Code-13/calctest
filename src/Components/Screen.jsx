@@ -4,17 +4,17 @@ import { useState } from "react"
 
 function Screen(props) {
 
-    const [ number, setNumber ] = useState(props.number);
+    const [ count, setCount] = useState(props.count);
 
 
     const clickMe = () => {
-        setNumber(number);
+        setCount(count+1);
 
     }
         
     return(
         <div className={props.className}>
-        <h1>{number+1}</h1>
+        <h1>{count}</h1>
         <button onClick={clickMe}>
             Start
         </button>
