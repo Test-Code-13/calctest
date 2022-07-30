@@ -47,8 +47,41 @@
 
 }
 
+.individualNumber2 {
+    background-color: red;
+    width: 70px;
+    height: 70px;
+
+    margin: auto;
+    display: flex;
+
+    font-size: 30px;
+
+    align-items: center;
+    justify-content: center;
+}
+
 .zero {
     background: lightgray;
+    position: absolute;
+    margin: 0;
+    display: flex;
+
+    left: 33px;
+    top: 500px;
+
+    height: 70px;
+    width: 240px;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+
+}
+
+.zero2 {
+    background: red;
     position: absolute;
     margin: 0;
     display: flex;

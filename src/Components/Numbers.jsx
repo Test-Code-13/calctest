@@ -26,21 +26,62 @@
 
 import React from "react";
 import "../app.css"
+import { useState } from "react";
+
+// function Numbers(props) {
+
+//     const [ className, setClassName ] = useState(props.className);
+
+//     const clickNumber = () => {
+//         setClassName(
+//             props.className2
+//             );
+//     }
+
+//     return(
+//         <div>
+//             <button className={props.className} onClick={clickNumber}>{props.number}</button>
+//         </div>
+//     )
+// }
 
 function Numbers(props) {
+
+    const [ style, setStyle ] = useState(props.style1);
+
+    const [ count, setCount ] = useState(props.count);
+
+
+    const clickMe = () => {
+        setCount(count+1);
+        console.log(count)
+
+    }
+
+    const clickNumber = () => {
+        setStyle(
+            props.styleClicked
+            );
+    }
+
     return(
         <div>
-            <p className={props.className}>{props.text}{props.number}</p>
+            <button className={style} onClick={() => 
+                {clickMe();
+                 clickNumber();
+                }}>{props.number}</button>
         </div>
     )
 }
 
-Numbers.defaultProps = {
-    text: '+'
-}
+
+// Numbers.defaultProps = {
+//     text: '+'
+// }
 
 Numbers.propTypes = {
     number: String // Boolean, Number
 }
 
 export default Numbers;
+

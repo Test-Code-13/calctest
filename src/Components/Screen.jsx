@@ -4,7 +4,7 @@ import { useState } from "react"
 
 function Screen(props) {
 
-    const [ count, setCount] = useState(props.count);
+    const [ count, setCount ] = useState(props.count);
 
 
     const clickMe = () => {
