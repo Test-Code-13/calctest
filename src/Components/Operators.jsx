@@ -26,10 +26,19 @@ import React from "react";
 import "../app.css"
 
 function Operators(props) {
+
+    const clickMe = () => {
+        props.setOutput(props.symbol);
+
+        if( props.heading === "Emma's Calculator") {
+            props.setHeading("Input Any Number");
+        }
+    }
+
     return(
-        <div>
-            <p className={props.className}>{props.symbol}</p>
-        </div>
+        <button className={props.className} onClick={clickMe}>
+            <p>{props.symbol}</p>
+        </button>
     )
 }
 

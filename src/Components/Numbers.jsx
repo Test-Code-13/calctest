@@ -49,35 +49,41 @@ function Numbers(props) {
 
     const [ style, setStyle ] = useState(props.style1);
 
-    const [ count, setCount ] = useState(props.count);
 
-
-    const clickMe = () => {
-        setCount(count+1);
-        console.log(count)
-
-    }
 
     const clickNumber = () => {
-        setStyle(
-            props.styleClicked
-            );
-    }
+        style === "individualNumber"? setStyle(props.styleClicked):
+        setStyle(props.style1);
+        props.setOutput(props.number);
+        console.log(props.output);
+
+        if( props.heading === "Emma's Calculator") {
+            props.setHeading("Input Any Number");
+        }
+        
+    //     if( style === "individualNumber") {
+    //     setStyle(
+    //         props.styleClicked
+    //         );
+    // } else {
+    //     setStyle(props.style1);
+    // }
+}
+
 
     return(
         <div>
-            <button className={style} onClick={() => 
-                {clickMe();
-                 clickNumber();
-                }}>{props.number}</button>
+            <button className={style} onClick={
+                 clickNumber
+                }>{props.number}</button>
         </div>
     )
 }
 
 
-// Numbers.defaultProps = {
-//     text: '+'
-// }
+Numbers.defaultProps = {
+    text: '+'
+}
 
 Numbers.propTypes = {
     number: String // Boolean, Number

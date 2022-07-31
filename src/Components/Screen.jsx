@@ -4,20 +4,26 @@ import { useState } from "react"
 
 function Screen(props) {
 
-    const [ count, setCount ] = useState(props.count);
 
+    // const [ count, setCount ] = useState(props.count);
 
-    const clickMe = () => {
-        setCount(count+1);
+    // const [ heading, setHeading ] = useState(props.heading);
 
-    }
+    // const clickMe = () => {
+    //     setCount(count+1);
+    //     // setHeading("Input Any Button");
+    //     // props.setOutput(1);
+    // }
+
         
     return(
         <div className={props.className}>
-        <h1>{count}</h1>
-        <button onClick={clickMe}>
+        <p>{props.heading}</p>
+        {/* <h1>{count}</h1> */}
+        <p>{props.output}</p>
+        {/* <button onClick={clickMe}>
             Start
-        </button>
+        </button> */}
         </div>
     )
 }
