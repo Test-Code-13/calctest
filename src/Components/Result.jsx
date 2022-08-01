@@ -1,15 +1,15 @@
 
 
-import React, {useState} from "react";
+import React from "react";
 import "../app.css"
 
 function Result(props) {
 
     // const [ result, setResult ] = useState(null);
 
-    if(props.output === '0') {
-        props.setResult(props.output);
-    }
+    // if(props.output === '0') {
+    //     props.setResult(props.output);
+    // }
 
     return(
         <div>

@@ -47,6 +47,13 @@ import { useState } from "react";
 
 function Numbers(props) {
 
+    // const initialState = ();
+
+        // if (props.result !== '') {
+        //    props.SetOutput(initialState);
+   
+        //     }
+
     const [ style, setStyle ] = useState(props.style1);
 
     const onMouseOut = () => {
@@ -58,11 +65,22 @@ function Numbers(props) {
 
     const clickNumber = () => {
 
+
+
         setStyle(props.styleClicked);
 
+
         // makes number into variable
-        props.setOutput(`${props.output}`+`${props.number}`);
+
         // console.log(props.output);
+        
+
+        props.setResult('');
+
+        props.setOutput(`${props.output}`+`${props.number}`);
+
+
+
 
         if( props.heading === "Emma's Calculator") {
             props.setHeading("Input Any Number");

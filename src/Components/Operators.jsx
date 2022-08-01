@@ -22,12 +22,22 @@
 
 // export default Operators;
 
-import React from "react";
+import React, {useState} from "react";
 import "../app.css"
 
 function Operators(props) {
 
+    const [ style, setStyle ] = useState(props.style1);
+
+    const onMouseOut = () => {
+        setStyle(props.style1)
+    }
+
     const clickMe = () => {
+
+        setStyle(props.styleClicked)
+
+        props.setResult('');
        
         // slice works in array or strings
         const lastCh = String(props.output).slice(String(props.output).length-1, String(props.output).length);
@@ -46,7 +56,7 @@ function Operators(props) {
     }
 
     return(
-        <button className={props.className} onClick={clickMe}>
+        <button className={style} onClick={clickMe} onMouseOut={onMouseOut}>
             <p>{props.symbol}</p>
         </button>
     )
