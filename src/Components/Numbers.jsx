@@ -47,7 +47,7 @@ import { useState } from "react";
 
 function Numbers(props) {
 
-    // const initialState = ();
+    // const initialState = ('');
 
         // if (props.result !== '') {
         //    props.SetOutput(initialState);
