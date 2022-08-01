@@ -49,13 +49,20 @@ function Numbers(props) {
 
     const [ style, setStyle ] = useState(props.style1);
 
+    const onMouseOut = () => {
 
+        // style === "individualNumber"? setStyle(props.styleClicked):
+        setStyle(props.style1);
+
+    }
 
     const clickNumber = () => {
-        style === "individualNumber"? setStyle(props.styleClicked):
-        setStyle(props.style1);
-        props.setOutput(props.number);
-        console.log(props.output);
+
+        setStyle(props.styleClicked);
+
+        // makes number into variable
+        props.setOutput(`${props.output}`+`${props.number}`);
+        // console.log(props.output);
 
         if( props.heading === "Emma's Calculator") {
             props.setHeading("Input Any Number");
@@ -73,9 +80,14 @@ function Numbers(props) {
 
     return(
         <div>
-            <button className={style} onClick={
+            <button className={style} 
+            onClick={
                  clickNumber
-                }>{props.number}</button>
+                }
+            onMouseOut={
+                onMouseOut
+            }
+                >{props.number}</button>
         </div>
     )
 }

@@ -20,7 +20,9 @@ function Screen(props) {
         <div className={props.className}>
         <p>{props.heading}</p>
         {/* <h1>{count}</h1> */}
-        <p>{props.output}</p>
+        {/* <p>{props.output}</p> */}
+        {/* <h2 className={props.result}>{props.output}</h2> */}
+        {props.children}
         {/* <button onClick={clickMe}>
             Start
         </button> */}
